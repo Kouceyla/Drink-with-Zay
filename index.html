@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drink with Zay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Drink with Zay Logo" class="logo">
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>☀️ Boisson Froide ou Chaude ?</h2>
+      <div class="roulette"><div id="wheel-temp" class="wheel"></div></div>
+      <button onclick="spin('temp')">Lancer</button>
+      <div id="result-temp" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>🍵 Matcha</h2>
+      <div class="roulette"><div id="wheel-matcha" class="wheel"></div></div>
+      <button onclick="spin('matcha')">Lancer</button>
+      <div id="result-matcha" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>☕ Café</h2>
+      <div class="roulette"><div id="wheel-cafe" class="wheel"></div></div>
+      <button onclick="spin('cafe')">Lancer</button>
+      <div id="result-cafe" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>🧋 Bubble Tea</h2>
+      <div class="roulette"><div id="wheel-bubble" class="wheel"></div></div>
+      <button onclick="spin('bubble')">Lancer</button>
+      <div id="result-bubble" class="result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Drink with Zay</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
