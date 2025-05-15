@@ -50,7 +50,7 @@ function spin(type) {
 
 // 🎨 Couleurs personnalisées par roue
 const colorPalettes = {
-  temp: ['#f9a8d4', '#a7f3d0'],
+  temp: ['#68b684', '#a7f3d0'],
   matcha: ['#a7f3d0', '#6ee7b7', '#34d399'],
   cafe: ['#d6a977', '#a9746e', '#7c4a33'],
   bubble: ['#fcd34d', '#f9a8d4', '#f472b6']
