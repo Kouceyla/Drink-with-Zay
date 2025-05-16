@@ -31,24 +31,6 @@ const wheels = {
   }
 };
 
-function spin(type) {
-  const wheel = wheels[type];
-  const itemCount = wheel.items.length;
-  const anglePerItem = 360 / itemCount;
-  const randomIndex = Math.floor(Math.random() * itemCount);
-  const extraRotation = 720 + randomIndex * anglePerItem;
-
-  // Animation de rotation + reset
-  wheel.result.classList.remove("visible");
-  wheel.element.style.transform = `rotate(${extraRotation}deg)`;
-
-  setTimeout(() => {
-    wheel.result.textContent = `👉 ${wheel.items[randomIndex]}`;
-    wheel.result.classList.add("visible");
-  }, 4000);
-}
-
-// 🎨 Couleurs personnalisées par roue
 const colorPalettes = {
   temp: ['#CD5C5C', '#2E8B57'],
   matcha: ['#a7f3d0', '#6ee7b7', '#34d399'],
@@ -56,7 +38,6 @@ const colorPalettes = {
   bubble: ['#fcd34d', '#f9a8d4', '#f472b6']
 };
 
-// 🌀 Appliquer les couleurs à chaque roue
 Object.entries(wheels).forEach(([key, w]) => {
   const count = w.items.length;
   const step = 100 / count;
@@ -69,3 +50,36 @@ Object.entries(wheels).forEach(([key, w]) => {
   gradient = gradient.slice(0, -2) + ')';
   w.element.style.background = gradient;
 });
+
+let rotationAngles = {
+  temp: 0,
+  matcha: 0,
+  cafe: 0,
+  bubble: 0
+};
+
+function spin(type) {
+  const wheel = wheels[type];
+  const itemCount = wheel.items.length;
+  const anglePerItem = 360 / itemCount;
+  const randomIndex = Math.floor(Math.random() * itemCount);
+  const spins = 6;
+  const targetAngle = randomIndex * anglePerItem;
+  const totalRotation = spins * 360 + targetAngle;
+
+  rotationAngles[type] += totalRotation;
+
+  wheel.result.classList.remove("visible");
+  wheel.element.style.transform = `rotate(${rotationAngles[type]}deg)`;
+
+  setTimeout(() => {
+    wheel.result.textContent = `👉 ${wheel.items[randomIndex]}`;
+    wheel.result.classList.add("visible");
+  }, 4000);
+}
+
+function shareResult() {
+  const text = "Je viens de tirer ma boisson sur Drink with Zay ! 🍹";
+  const url = "https://drinkwithzay.com";
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`, "_blank");
+}

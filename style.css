@@ -1,28 +1,27 @@
+/* style.css */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fefefe;
+  background: linear-gradient(120deg, #fdf3f5, #fefefe);
+  background-size: 200% 200%;
+  animation: bgMove 10s ease infinite;
   color: #333;
 }
-
+@keyframes bgMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
 header {
   text-align: center;
   padding: 30px;
   background-color: #fdf3f5;
   border-bottom: 3px solid #e5e5e5;
 }
-
-header h1 {
-  font-size: 3em;
-  color: #68b684;
-  margin-bottom: 10px;
+.logo {
+  max-width: 450px;
+  margin: 0 auto 10px;
+  display: block;
 }
-
-header p {
-  font-size: 1.2em;
-  color: #aa6aa1;
-}
-
 main {
   padding: 20px;
   display: flex;
@@ -30,7 +29,6 @@ main {
   justify-content: center;
   gap: 30px;
 }
-
 .card {
   background-color: #fff;
   border-radius: 20px;
@@ -40,17 +38,9 @@ main {
   text-align: center;
   transition: transform 0.2s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
 }
-
-.drink-image {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
 .roulette {
   margin: 15px auto;
   width: 200px;
@@ -60,8 +50,6 @@ main {
   overflow: hidden;
   position: relative;
 }
-
-/* 🔻 Flèche indicatrice */
 .roulette::after {
   content: "";
   position: absolute;
@@ -74,27 +62,16 @@ main {
   z-index: 10;
   animation: blink 1s infinite ease-in-out;
 }
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
-/* 🌀 Roue avec animation */
 .wheel {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   transition: transform 4s cubic-bezier(0.25, 1, 0.5, 1);
-  background: conic-gradient(
-    #000000 0% 20%,
-    #a7f3d0 20% 40%,
-    #000000 40% 60%,
-    #c084fc 60% 80%,
-    #fdba74 80% 100%
-  );
 }
-
-/* 💥 Animation bouton */
 button {
   background-color: #f9a8d4;
   color: white;
@@ -106,13 +83,10 @@ button {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 button:hover {
   background-color: #ec4899;
   transform: scale(1.05);
 }
-
-/* ✨ Apparition du résultat */
 .result {
   margin-top: 12px;
   font-weight: bold;
@@ -122,69 +96,31 @@ button:hover {
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.4s ease;
 }
-
 .result.visible {
   opacity: 1;
   transform: scale(1);
 }
-
 footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
   color: #888;
 }
-
-.logo {
-  max-width: 450px;
-  margin: 0 auto 10px;
-  display: block;
-}
-
-/* 📱 Responsive : Téléphones */
+/* Responsive */
 @media (max-width: 768px) {
-  header {
-    padding: 20px;
-  }
-
-  .logo {
-    max-width: 90%;
-  }
-
   main {
     flex-direction: column;
     padding: 15px;
   }
-
   .card {
-    width: 100%;
+    width: 90%;
     max-width: 95%;
-    margin: 0 auto;
-    padding: 20px;
   }
-
   .roulette {
     width: 150px;
     height: 150px;
   }
-
-  .wheel {
-    transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-
   button {
     width: 100%;
-    padding: 14px;
-    font-size: 1rem;
-  }
-
-  .result {
-    font-size: 1rem;
-  }
-
-  footer {
-    font-size: 0.8em;
-    padding: 15px;
   }
 }
-
