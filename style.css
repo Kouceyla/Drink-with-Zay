@@ -140,3 +140,51 @@ footer {
   margin: 0 auto 10px;
   display: block;
 }
+
+/* 📱 Responsive : Téléphones */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  .logo {
+    max-width: 90%;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .roulette {
+    width: 150px;
+    height: 150px;
+  }
+
+  .wheel {
+    transition: transform 3.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .result {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 15px;
+  }
+}
+
