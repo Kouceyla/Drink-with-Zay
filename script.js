@@ -8,7 +8,7 @@ const wheels = {
     element: document.getElementById("wheel-matcha"),
     result: document.getElementById("result-matcha"),
     items: [
-      "Matcha Latte Vanille", "Coco", "Mousse Coco", "Cassis", "Fruits Rouge",
+      "Matcha Latte Vanille", "Coco", "Mousse Coco", "Cassis", "Fruits Rouges",
       "Chocolat Blanc", "Blueberry", "Mango", "Lait de Coco", "Coco/Mango"
     ]
   },
@@ -50,7 +50,7 @@ function spin(type) {
 
 // 🎨 Couleurs personnalisées par roue
 const colorPalettes = {
-  temp: ['#C65463', '#286234'],
+  temp: ['#CD5C5C', '#2E8B57'],
   matcha: ['#a7f3d0', '#6ee7b7', '#34d399'],
   cafe: ['#d6a977', '#a9746e', '#7c4a33'],
   bubble: ['#fcd34d', '#f9a8d4', '#f472b6']
