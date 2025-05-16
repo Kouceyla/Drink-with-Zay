@@ -48,7 +48,7 @@ Object.entries(wheels).forEach(([key, w]) => {
     gradient += `${color} ${i * step}% ${(i + 1) * step}%, `;
   }
   gradient = gradient.slice(0, -2) + ')';
-  w.element.style.background = gradient;
+  w.element.style.background = gradient; 
 });
 
 let rotationAngles = {
@@ -73,7 +73,7 @@ function spin(type) {
   wheel.element.style.transform = `rotate(${rotationAngles[type]}deg)`;
 
   setTimeout(() => {
-    wheel.result.textContent = `👉 ${wheel.items[randomIndex]}`;
+    wheel.result.textContent = ` ${wheel.items[randomIndex]}`;
     wheel.result.classList.add("visible");
   }, 4000);
 }
