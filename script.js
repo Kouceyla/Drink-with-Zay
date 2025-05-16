@@ -8,8 +8,8 @@ const wheels = {
     element: document.getElementById("wheel-matcha"),
     result: document.getElementById("result-matcha"),
     items: [
-      "Matcha Latte Vanille", "Coco", "Mousse Coco", "Cassis", "Fruits Rouges",
-      "Chocolat Blanc", "Blueberry", "Mango", "Lait de Coco", "Coco/Mango"
+      "Matcha Latte Vanille", "Matcha Latte Coco", "Matcha Latte Mousse Coco", "Matcha Latte Cassis", "Matcha Latte Fruits Rouges",
+      "Matcha Latte Chocolat Blanc", "Matcha Latte Blueberry", "Matcha Latte Mango", "Matcha Latte Lait de Coco", "Matcha Latte Coco/Mango"
     ]
   },
   cafe: {
