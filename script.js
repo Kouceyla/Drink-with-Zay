@@ -16,9 +16,9 @@ const wheels = {
     element: document.getElementById("wheel-cafe"),
     result: document.getElementById("result-cafe"),
     items: [
-      "Coffee Latte Caramel", "Caramel Salé", "Caramel Beurre Salé", "Vanille",
-      "Crème Brûlée", "Chocolat", "Spéculos", "Pumpkin Spice", "Tiramisu",
-      "Peanut Butter", "Brown Sugar"
+      "Coffee Latte Caramel", "Coffee Latte Caramel Salé", "Coffee Latte Caramel Beurre Salé", "Coffee Latte Vanille",
+      "Coffee Latte Crème Brûlée", "Coffee Latte Chocolat", "Coffee Latte Spéculos", "Coffee Latte Pumpkin Spice", "Coffee Latte Tiramisu",
+      "Coffee Latte Peanut Butter", "Coffee Latte Brown Sugar"
     ]
   },
   bubble: {
