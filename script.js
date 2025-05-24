@@ -1,15 +1,10 @@
 const wheels = {
-  temp: {
-    element: document.getElementById("wheel-temp"),
-    result: document.getElementById("result-temp"),
-    items: ["Boisson Froide", "Boisson Chaude"],
-  },
   matcha: {
     element: document.getElementById("wheel-matcha"),
     result: document.getElementById("result-matcha"),
     items: [
       "Matcha Latte Vanille", "Matcha Latte Coco", "Matcha Latte Mousse Coco", "Matcha Latte Cassis", "Matcha Latte Fruits Rouges",
-      "Matcha Latte Chocolat Blanc", "Matcha Latte Blueberry", "Matcha Latte Mango", "Matcha Latte Lait de Coco", "Matcha Latte Coco/Mango"
+      "Matcha Latte Chocolat Blanc", "Matcha Latte Blueberry", "Matcha Latte Mango", "Matcha Latte Lait de Coco", "Matcha Latte Coco/Mango","Matcha Latte Passion"
     ]
   },
   cafe: {
@@ -33,9 +28,9 @@ const wheels = {
 
 const colorPalettes = {
   temp: ['#CD5C5C', '#2E8B57'],
-  matcha: ['#a7f3d0', '#6ee7b7', '#34d399'],
-  cafe: ['#d6a977', '#a9746e', '#7c4a33'],
-  bubble: ['#fcd34d', '#f9a8d4', '#f472b6']
+  matcha: ['#37633F', '#67944C', '#A3C651'],
+  cafe: ['#442818', '#9B592A', '#BC9558'],
+  bubble: ['#F7AF60', '#F7995E', '#F47F58']
 };
 
 Object.entries(wheels).forEach(([key, w]) => {

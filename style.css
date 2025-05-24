@@ -45,7 +45,7 @@ main {
   margin: 15px auto;
   width: 200px;
   height: 200px;
-  border: 6px solid #68b684;
+  
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -73,8 +73,8 @@ main {
   transition: transform 4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 button {
-  background-color: #f9a8d4;
-  color: white;
+  background-color: #FFEFA7;
+  color: black;
   border: none;
   padding: 12px 24px;
   font-size: 16px;
@@ -84,14 +84,14 @@ button {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 button:hover {
-  background-color: #ec4899;
+  background-color: #EA925E;
   transform: scale(1.05);
 }
 .result {
   margin-top: 12px;
   font-weight: bold;
   font-size: 18px;
-  color: #aa6aa1;
+  color: #946743;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.4s ease;
